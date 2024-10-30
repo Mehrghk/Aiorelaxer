@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="title1">AioRelaxer</div>
+<div class="main">
+    <div class="main2">
+        <div class="circle" id="circle">
+            <div class="circle2">
+                <span class="text1" id="text1">Aiolearn!</span>
+            </div>
+            <div class="pointer">
+                <div class="mahh"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<script>
+    const text1 = document.getElementById("text1");
+    const circle = document.getElementById("circle");
+
+    dam();
+    function dam(){
+        
+        text1.innerText = 'In!';
+        circle.className = 'circle dam';
+        setTimeout(hold,2000);
+    }
+    function hold(){
+        text1.innerText = 'Hold!';
+        circle.className = 'circle hold';
+        setTimeout(bazdam,1000);
+    }
+    function bazdam(){
+        text1.innerText = 'Out!';
+        circle.className = 'circle bazdam';
+        setTimeout(dam,2000);
+    }
+</script>
+</body>
+</html>
